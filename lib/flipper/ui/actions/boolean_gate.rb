@@ -18,6 +18,8 @@ module Flipper
             feature.disable
           end
 
+          # Should be:
+          # redirect_to "/features/#{Rack::Utils.escape_path(@feature.key)}"
           redirect_to "/features/#{@feature.key}"
         end
       end
